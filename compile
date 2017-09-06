@@ -1,0 +1,18 @@
+#!/bin/bash
+
+java -jar compiler/closure-compiler-v20170806.jar \
+  --compilation_level ADVANCED_OPTIMIZATIONS \
+  --externs compiler/externs/jquery-3.2.js \
+  --js_output_file=dist/flip.the.page.$1.js \
+  --js 'src/plugin.js' \
+  --js 'src/helper/dom.js' \
+  --js 'src/helper/config.js' \
+  --language_out ECMASCRIPT5 \
+  --language_in ECMASCRIPT_2017
+
+  # --language_in ES6 \
+  # --language_out ES5 \
+  # --compilation_level ADVANCED_OPTIMIZATIONS \
+  # --externs compiler/externs/jquery-3.2.js \
+  # --charset UTF-8 \
+  # --js_module_root 'src/'

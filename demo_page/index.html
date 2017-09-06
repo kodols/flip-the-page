@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+    <div id="e-book"></div>
+
+    <script type="text/javascript" src="../externs/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../dist/flip.the.page.0.1.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $('#e-book').flipThePage({
+          remote : '../dist/server.php'
+        });
+      });
+    </script>
+
+  </body>
+</html>
